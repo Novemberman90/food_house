@@ -1241,7 +1241,7 @@ text-align: center;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        min-height: 50vh;
+        min-height: 100vh;
         margin-bottom: 50px;
     }
     .gallery_item1 {
@@ -1261,7 +1261,6 @@ text-align: center;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        max-width: 290px;
         width: 100%;
         min-height: 50vh;
     }
@@ -1270,7 +1269,6 @@ text-align: center;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        max-width: 290px;
         width: 100%;
         min-height: 50vh;
     }
