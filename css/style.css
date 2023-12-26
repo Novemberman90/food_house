@@ -1137,7 +1137,7 @@ text-align: center;
     }
    }
 
-   @media (max-width: 392px) {
+   @media (max-width: 400px) {
     .header__logo {
         position: relative;
     }
