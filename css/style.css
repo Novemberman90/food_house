@@ -1137,7 +1137,7 @@ text-align: center;
     }
    }
 
-   @media (max-width: 340px) {
+   @media (max-width: 392px) {
     .header__logo {
         position: relative;
     }
@@ -1162,6 +1162,9 @@ text-align: center;
   
     .logo-img {
         display: none;
+    }
+    .poromo__inner {
+        align-items: center;
     }
     .poromo__inner-sidebar {
         display: none;
