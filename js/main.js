@@ -35,14 +35,12 @@ mobilMenu.addEventListener('click', ()=>{
 });
 
 const swiper = new Swiper ('.swiper', {
-    slidesPerView: 3,
-    spaceBetween: 30,
+  /* slidesPerView: 3,
+    spaceBetween: 30,*/
     loop: true,
     breakpoints: {
-
-       
-        920: {
-            slidesPerView: 3,
+       /* 920: {
+            slidesPerView: 1,
             spaceBetween: 30,
         },
        
@@ -53,9 +51,18 @@ const swiper = new Swiper ('.swiper', {
         320: {
             slidesPerView: 1,
             spaceBetween: 20,
-        },
+        },*/
         0: {
             slidesPerView: 1,
+            
+        },
+        528: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        920: {
+            slidesPerView: 3,
+            spaceBetween: 30,
         },
     },
     navigation: {
