@@ -14,6 +14,7 @@ if(menuImg){
 const closeMenu = ()=>{
     menuImg.classList.remove('__active');
     mobilMenu.classList.remove('__active');
+    document.documentElement.classList.remove('_lock');
 }
 
 document.body.addEventListener('click', (e)=>{
