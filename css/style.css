@@ -1,5 +1,6 @@
+
 :root {
-    --swiper-theme-color: none;
+    --swiper-theme-color: #FF7400;
 }
 
 html {
@@ -585,19 +586,26 @@ font-weight: 400;
 }
 
 .testimonial__inner {
-    padding: 105px 0px;
+    margin: 0 a;
+    padding: 105px 115px;
+    display: flex;
+    text-align: center;
+    position: relative;
+    max-width: 920px;
+}
+
+.testimonial__card {
     display: flex;
     flex-direction: column;
-    text-align: center;
-}
-.swiper-blog {
-    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .testimonial__card-img {
     margin-bottom: 17px;
 }
 .testimonial__text {
+    width: 100%;
     color: #000;
     text-align: center;
     font-family: Open Sans;
@@ -613,11 +621,7 @@ font-weight: 400;
 .visitor__name {
     margin-bottom: 30px;
 }
-.swiper-pagination-bullet {
-background-image: url(../images/testmemirial_elisp.svg);
-width: 7px;
-height: 7px;
-}
+
 .food_gallery-inner-top {
     display: flex;
     justify-content: center;
@@ -749,7 +753,7 @@ text-align: center;
         top: 50%;
     }
     .testimonial__inner  {
-        padding: 105px 130px;
+        padding: 105px 0px;
     }
 }
 
@@ -788,7 +792,7 @@ text-align: center;
     }
 
     .testimonial__inner {
-        padding: 105px 115px;
+        padding: 105px 0px;
     }
 }
 
@@ -1134,7 +1138,7 @@ text-align: center;
         margin-bottom: 30px;
     }
     .testimonial__inner  {
-        padding: 105px 50px
+        padding: 105px 50px;
     }
    }
 
