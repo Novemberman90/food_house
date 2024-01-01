@@ -75,19 +75,26 @@ const swiper = new Swiper ('.swiper', {
   });
 
   var swiper2 = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+   spaceBetween: 30,
     loop: true,
-    slidesPerView:1,
-    spaceBetween: 20,
+      
     breakpoints: {
         0: {
             slidesPerView: 1,
+           
         },
-        768: {
-            slidesPerView:1,
-            spaceBetween: 20,
-        }
+        748: {
+            slidesPerView: 1,
+           
+        },
+         1100: {
+            slidesPerView: 1,
+         
+        },
     },
     pagination: {
       el: ".swiper-pagination",
     },
+ 
   });
