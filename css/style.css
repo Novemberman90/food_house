@@ -586,19 +586,17 @@ font-weight: 400;
 }
 
 .testimonial__inner {
-    margin: 0 a;
+    margin: 0 auto;
     padding: 105px 115px;
     display: flex;
     text-align: center;
     position: relative;
-    max-width: 920px;
 }
 
 .testimonial__card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
 }
 
 .testimonial__card-img {
