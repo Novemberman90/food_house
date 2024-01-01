@@ -77,24 +77,26 @@ const swiper = new Swiper ('.swiper', {
   var swiper2 = new Swiper(".mySwiper", {
     slidesPerView: 1,
    spaceBetween: 20,
-    loop: true,
       
     breakpoints: {
         0: {
             slidesPerView: 1,
-           
+            spaceBetween: 20,
         },
-        748: {
+        480: {
             slidesPerView: 1,
-           
+            spaceBetween: 20,
         },
-         1100: {
+         640: {
             slidesPerView: 1,
-         
+            spaceBetween: 20,
         },
     },
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
+      autoHeight: true,
     },
+    
  
   });
