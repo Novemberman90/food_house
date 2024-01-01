@@ -555,7 +555,7 @@ font-weight: 400;
     border:none;
 }
 
-.blog__button {
+ .blog__button {
     position: absolute;
     top: 42%;
     cursor: pointer;
@@ -563,6 +563,15 @@ font-weight: 400;
     display: block;
 }
 
+/*.blog__button::before {
+    background-image: url(../images/Ellipse-btn.svg);
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+}*/
 .swiper-button-right {
    
     right: -70px;
@@ -572,23 +581,34 @@ font-weight: 400;
     left: -70px;
 }
 
+
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
     opacity: 1;
     cursor: pointer;
     pointer-events: inherit;
 }
+/*
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    background-image: url(../images/Ellipse-btn.svg);
+    content: '';
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}*/
 
 .testimonial {
     background: #E5E5E5;
 }
 
 .testimonial__inner {
-    max-width: 920px;
+    /*max-width: 920px;*/
+    min-width: 0;
     margin: 0 auto;
     padding: 105px 115px;
-    display: flex;
-    text-align: center;
     position: relative;
 }
 
@@ -617,6 +637,13 @@ font-weight: 400;
 
 .visitor__name {
     margin-bottom: 30px;
+}
+
+.swiper-pagination-bullet {
+    background-image: url(../images/testmemirial_elisp.svg);
+    width: 7px;
+    height: 7px;
+    background-color: rgba(196, 196, 196, 0.00);
 }
 
 .food_gallery-inner-top {
