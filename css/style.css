@@ -586,6 +586,7 @@ font-weight: 400;
 }
 
 .testimonial__inner {
+    max-width: 920px;
     margin: 0 auto;
     padding: 105px 115px;
     display: flex;
