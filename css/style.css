@@ -1238,6 +1238,9 @@ text-align: center;
     .testimonial__inner  {
         padding: 105px 10px
     }
+    .testimonial__text {
+        max-width: 290px;
+    }
     .food_gallery-subimages {
         display: block;
         background-image: url(../images/pizza-img.png);
