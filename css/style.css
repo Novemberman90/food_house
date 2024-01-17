@@ -555,8 +555,7 @@ font-weight: 400;
     border:none;
 }
 
- .blog__button {
-    position: absolute;
+ .blog__button { 
     top: 42%;
     cursor: pointer;
     z-index: 9999;
@@ -716,6 +715,12 @@ text-align: center;
     display: flex;
 }
 
+@media (max-width: 1389px) {
+    .blog__button {
+        top: 30%;
+    }
+}
+
 @media (max-width: 1099px) {
     .promo {
         background-position:inherit;
@@ -752,6 +757,9 @@ text-align: center;
         font-size: 22px;
         padding: 10px 15px;
     }
+    .blog__button {
+        display: none;
+    }
     .delicious__content-h2 {
         font-size: 46px
     }
@@ -771,10 +779,6 @@ text-align: center;
     .meal__inner {
         margin-top: 100px;
         margin-bottom: 100px;
-    }
-
-    .blog__button{
-        top: 50%;
     }
     .testimonial__inner  {
         padding: 105px 0px;
