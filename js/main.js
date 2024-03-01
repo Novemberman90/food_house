@@ -74,7 +74,7 @@ const swiper = new Swiper ('.swiper', {
 
   });
 
-  var swiper2 = new Swiper(".mySwiper", {
+  var swiper2 = new Swiper(".testimonial-slider", {
     slidesPerView: 1,
    spaceBetween: 20,
       
