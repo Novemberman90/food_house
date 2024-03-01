@@ -451,11 +451,11 @@ font-weight: 400;
 }
 
 .menu__inner {
-    display: flex;
+/*     display: flex; */
     text-align: center;
     min-height: 100vh;
-    flex-direction: column;
-    position: relative;
+/*     flex-direction: column;
+    position: relative; */
    /* padding: 0px 30px;*/
 }
 .menu__inner-titile {
@@ -587,28 +587,34 @@ font-weight: 400;
     cursor: pointer;
     pointer-events: inherit;
 }
-/*
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    background-image: url(../images/Ellipse-btn.svg);
-    content: '';
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}*/
 
 .testimonial {
     background: #E5E5E5;
 }
 
 .testimonial__inner {
-    /*max-width: 920px;*/
-    min-width: 0;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
     padding: 105px 115px;
     position: relative;
+}
+
+.testimonial-slider {
+    width: 920px;
+    overflow: hidden; /* чтобы не было видно лишних слайдов. а чтобы в кадре был только один */
+}
+.swiper-pagination-bullet {
+    background-color: #C4C4C4;
+    width: 7px;
+    height: 7px;
+    opacity: 1;
+   /*  border: 1px solid #C4C4C4; */
+}
+.swiper-pagination-bullet-active {
+    background-color: #E5E5E5;
+    width: 9px;
+    height: 9px;
+    border: 1px solid #FF7400;
 }
 
 .testimonial__card {
@@ -638,12 +644,12 @@ font-weight: 400;
     margin-bottom: 30px;
 }
 
-.swiper-pagination-bullet {
+/* .swiper-pagination-bullet {
     background-image: url(../images/testmemirial_elisp.svg);
     width: 7px;
     height: 7px;
     background-color: rgba(196, 196, 196, 0.00);
-}
+} */
 
 .food_gallery-inner-top {
     display: flex;
