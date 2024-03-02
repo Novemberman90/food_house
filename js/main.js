@@ -36,8 +36,8 @@ mobilMenu.addEventListener('click', ()=>{
 });
 
 const swiper = new Swiper ('.swiper', {
-  /* slidesPerView: 3,
-    spaceBetween: 30,*/
+    slidesPerView: 3,
+    spaceBetween: 30,
     loop: true,
     breakpoints: {
        /* 920: {
@@ -58,7 +58,7 @@ const swiper = new Swiper ('.swiper', {
             spaceBetween: 20,
             
         },
-        528: {
+        620: {
             slidesPerView: 2,
             spaceBetween: 20,
         },
@@ -68,11 +68,21 @@ const swiper = new Swiper ('.swiper', {
         },
     },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiperNext",
+        prevEl: ".swiperPrev",
       },
 
   });
+  const swiperPrev = document.getElementById('swiperPrev')
+  const swiperNext = document.getElementById('swiperNext')
+  
+  swiperPrev.addEventListener('click', () => {
+    swiper.slidePrev();
+  })
+  swiperNext.addEventListener('click', () => {
+    swiper.slideNext();
+  });
+
 
   var swiper2 = new Swiper(".testimonial-slider", {
     slidesPerView: 1,
