@@ -451,12 +451,12 @@ font-weight: 400;
 }
 
 .menu__inner {
-/*     display: flex; */
+    display: flex;
+    align-items: center;
     text-align: center;
     min-height: 100vh;
-/*     flex-direction: column;
-    position: relative; */
-   /* padding: 0px 30px;*/
+    padding: 0px 70px;
+    position: relative;
 }
 .menu__inner-titile {
     text-align: center;
@@ -468,28 +468,15 @@ font-weight: 400;
     padding-bottom: 140px;
 }
 
-/*.swiper-slide {
-    max-width: 350px;
-    width: 350px;
-}*/
-
 .menu__inner-card {
     position: relative;
-    /*max-width: 350px; */
-    /*height: 510px;
-    width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #fff;
     padding: 30px 0px;
 }
-/*.menu__inner-blog {
-    padding-bottom: 226px;
-    display: flex;
-    justify-content: center;
-    gap: 0 30px;
-} */
+
 .menu__inner-card-recommed {
     position: absolute;
     left: 0;
@@ -556,38 +543,18 @@ font-weight: 400;
 }
 
  .blog__button { 
-    top: 42%;
-    cursor: pointer;
-    z-index: 9999;
-    display: block;
-}
-
-/*.blog__button::before {
-    background-image: url(../images/Ellipse-btn.svg);
     position: absolute;
-    content: '';
-    width: 40px;
-    height: 40px;
-    top: 0;
-    left: 0;
-}*/
-.swiper-button-right {
-   
-    right: -70px;
-}
-
-.swiper-button-left {
-    left: -70px;
-}
-
-
-.swiper-button-next.swiper-button-disabled,
-.swiper-button-prev.swiper-button-disabled {
-    opacity: 1;
     cursor: pointer;
-    pointer-events: inherit;
+    z-index: 10;
+    display: block;
+    top: 50%;
 }
-
+.btn-prev {
+    left: 0;
+}
+.btn-next {
+    right: 0;
+}
 .testimonial {
     background: #E5E5E5;
 }
@@ -643,14 +610,6 @@ font-weight: 400;
 .visitor__name {
     margin-bottom: 30px;
 }
-
-/* .swiper-pagination-bullet {
-    background-image: url(../images/testmemirial_elisp.svg);
-    width: 7px;
-    height: 7px;
-    background-color: rgba(196, 196, 196, 0.00);
-} */
-
 .food_gallery-inner-top {
     display: flex;
     justify-content: center;
@@ -721,11 +680,11 @@ text-align: center;
     display: flex;
 }
 
-@media (max-width: 1389px) {
+/* @media (max-width: 1389px) {
     .blog__button {
-        top: 30%;
+        top: 50%;
     }
-}
+} */
 
 @media (max-width: 1099px) {
     .promo {
@@ -762,9 +721,6 @@ text-align: center;
     .story__inner-card-text{
         font-size: 22px;
         padding: 10px 15px;
-    }
-    .blog__button {
-        display: none;
     }
     .delicious__content-h2 {
         font-size: 46px
@@ -874,7 +830,9 @@ text-align: center;
     .menu__inner-titile {
         font-size: 46px;
     }
-
+    .menu__inner-card {
+        padding: 30px 20px;
+    }
     .food_gallery__titile {
         font-size: 46px;
         font-weight: 400;
@@ -1011,9 +969,6 @@ text-align: center;
         font-weight: 700;
         color: #FFF;
         border: none;
-    }
-    .blog__button {
-        display: none;
     }
     .info__content-h3, .info__content-span {
         font-size: 36px;
@@ -1174,6 +1129,9 @@ text-align: center;
     .testimonial__inner  {
         padding: 105px 50px;
     }
+    .menu__inner-card-btn {
+        width: 130px;
+    }
    }
 
    @media (max-width: 400px) {
@@ -1253,6 +1211,9 @@ text-align: center;
 
     .menu__inner {
         padding: 0;
+    }
+    .blog__button {
+        display: none;
     }
     .food_gallery-titile-span,
     .meal__inner-titile-span {
