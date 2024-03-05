@@ -44,9 +44,21 @@ html._lock {
     padding: 0 20px;
     margin: 0 auto;
 }
-
+.order-form__btn,
+.promo__subtitile-btn,
+.delicious__btn {
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+}
+.order-form__btn:hover,
+.promo__subtitile-btn:hover,
+.delicious__btn:hover {
+    filter: drop-shadow(#FF7400 2px 2px 5px);
+    transform : translateX(3px);
+}
 .header {
-    padding-top: 25px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     position: absolute;
     left: 0;
     right: 0;
@@ -79,6 +91,11 @@ html._lock {
     color: #FFF;
     font-family: 'Open Sans';
     font-size: 14px;
+    transition: all ease-in-out .3s;
+}
+.menu-link:hover {
+    color: #FF7400;
+    filter: drop-shadow(#fff 5px 5px 20px);
 }
 
 .shopping-cart {
@@ -116,6 +133,11 @@ html._lock {
     margin-left: 7px;
     font-size: 16px;
     font-weight: 700;
+    transition: all ease-in-out 0.3s;
+}
+.order-form__link:hover {
+    /* color: #FF7400; */
+    filter: drop-shadow(#FF7400 5px 5px 20px);
 }
 .order-form__text {
     color:#FFF;
@@ -540,8 +562,12 @@ font-weight: 400;
     background: #D67E34;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
     border:none;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
 }
-
+.menu__inner-card-btn:hover {
+    transform: translateY(2px);
+}
  .blog__button { 
     position: absolute;
     cursor: pointer;
