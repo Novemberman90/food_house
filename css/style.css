@@ -4,15 +4,17 @@
 html {
     box-sizing: border-box;
 }
-
+body.lock {
+    overflow: hidden;
+}
 *,
 *::before,
 *::after {
     box-sizing:inherit;
 }
 body {
-    font-family: Open Sans;
-    font-weight: 400;
+    font-family: "Open Sans" sans-serif;
+    font-weight: 300;
     font-size: 14px;
     line-height: 1.2;
 }
@@ -149,14 +151,18 @@ html._lock {
     max-width: 155px;
     margin-right: 40px;
 }
-.order-form__btn {
+.order-form__btn,
+.form__btn {
+    text-align: center;
+    padding-top: 17px;
+    padding-bottom: 15px;
     width: 157px;
-    height: 47px;
     background: #FF7400;
     font-size: 14px;
     font-weight: 700;
     color:#FFF;
     border: none;
+    cursor: pointer;
 }
 
 .promo {
@@ -194,7 +200,7 @@ html._lock {
 
 .promo__title-h1 {
     color: #D67E35;
-    font-family: Tinos;
+    font-family: "Tinos";
     font-size: 50px;
     font-style: normal;
     font-weight: 400;
@@ -203,7 +209,7 @@ html._lock {
 
 .promo__title-h2 {
     color: #D67E35;
-    font-family: Tinos;
+    font-family: "Tinos";
     font-size: 80px;
     font-weight: 400;
 }
@@ -214,7 +220,7 @@ html._lock {
     align-items: center;
     gap: 0 8px;
     color: #FFF;
-    font-family: Open Sans;
+    font-family:"Open Sans";
     font-size: 18px;
     font-weight: 400;
 }
@@ -227,10 +233,11 @@ html._lock {
 .promo__subtitile-btn {
  margin-top: 20px;
  width: 140px;
-height: 50px;
+padding-top: 15px;
+padding-bottom: 15px;
 background: #FF7400;
 color: #FFF;
-font-family: Open Sans;
+font-family: "Open Sans";
 font-size: 14px;
 font-weight: 700;
 border:none;
@@ -273,7 +280,7 @@ border:none;
 
 .promo__inner-card-span {
     color: #BC9060;
-    font-family: Tinos;
+    font-family: "Tinos";
     font-size: 26px;
 
 }
@@ -291,14 +298,14 @@ border:none;
 
 .story__inner-card-h4 {
     color: #2C2C2C;
-    font-family: Tinos;
+    font-family: "Tinos";
     font-size: 26px;
     font-weight: 400;
 }
 
 .story__inner-card-span {
     color: #BC9060;
-    font-family: Tinos;
+    font-family: "Tinos";
     font-size: 26px;
     font-weight: 400;
 }
@@ -306,7 +313,7 @@ border:none;
 .story__inner-card-text {
     color: #656363;
     text-align: center;
-    font-family: Tinos;
+    font-family: "Tinos";
     font-size: 26px;
     font-weight: 400;
     max-width: 376px;
@@ -324,13 +331,13 @@ border:none;
 }
 .info__content-h3 {
     color: #000;
-    font-family: Tinos;
+    font-family: "Tinos";
     font-size: 54px;
     font-weight: 400;
 }
 .info__content-span {
     color: #D67E34;
-    font-family: Tinos;
+    font-family: "Tinos";
     font-size: 54px;
     font-weight: 400;
 
@@ -339,7 +346,7 @@ border:none;
     margin-top: 21px;
     color: #656363;
     text-align: center;
-    font-family: Open Sans;
+    font-family: "Open Sans";
     font-size: 16px;
 }
 .story__descr-list {
@@ -351,14 +358,14 @@ border:none;
 .story__descr-list dd {
     color: #BC9060;
     text-align: center;
-    font-family: Open Sans;
+    font-family: "Open Sans";
     font-size: 40px;
 }
 
 .story__descr-list dt {
     color: #000;
     text-align: center;
-    font-family: Open Sans;
+    font-family: "Open Sans";
     font-size: 20px;
 }
 .story-img {
@@ -399,11 +406,13 @@ border:none;
 }
 
 .delicious__btn {
+    text-align:center;
+    padding-top: 16px;
     width: 157px;
     height: 47px;
     background: #FF7400;
     color: #FFF;
-    font-family: Open Sans;
+    font-family: "Open Sans";
     font-size: 14px;
     font-weight: 700;
     border:none;
@@ -557,21 +566,23 @@ font-weight: 400;
     padding: 0 30px;
 }
 .menu__inner-card-btn {
+    padding-top: 16px;
+    padding-bottom: 16px;
     width: 220px;
-    height: 50px;
     background: #D67E34;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
     border:none;
     transition: all ease-in-out .3s;
     cursor: pointer;
 }
-.menu__inner-card-btn:hover {
+.menu__inner-card-btn:hover,
+.form__btn:hover {
     transform: translateY(2px);
 }
  .blog__button { 
     position: absolute;
     cursor: pointer;
-    z-index: 10;
+    z-index: 4;
     display: block;
     top: 50%;
 }
@@ -712,6 +723,179 @@ text-align: center;
     }
 } */
 
+
+/* popup */
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y:auto ; /* если много текста в модально окне, то у нам появиться вертикальный скрол */
+    overflow-x: hidden; /* блокируем горизонтальный скрол */
+    transition: all 0.8s ease 0s; /* аннимация для появления и закрытия */
+    z-index: 5;
+}
+
+.popup.open { 
+    opacity: 1;
+    visibility: visible;
+}
+.popup.open .popup__content { 
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    opacity: 1;
+}
+
+
+.popup__area { /* теперь область вокург модального окна это ссылка */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.popup__body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+.popup__content {
+    background-color: #fff;
+    max-width: 800px;
+    color: black;
+    padding: 30px;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+   /*  transform: translate(0px, -100%); */ /* модальное окно будет появлять сверху типа как спускается */
+   transform: perspective(600px) translate(0px, -100%) rotateX(45deg); /* а так будет эфект типа открытия сверху */
+}
+.popup__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color:black;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+.popup__close:hover {
+    font-size: 16px;
+    filter: drop-shadow( red 5px 5px 10px);
+}
+/* .close-popup {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color:black;
+    text-decoration: none;
+} */
+.popup__title {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.popup__menu-link {
+    display: flex;
+    flex-direction: column;
+}
+.delivery-link {
+    font-weight: 300;
+    font-size: 12px;
+    color: orange;
+    margin-bottom: 10px;
+    transition: all ease-in-out 0.3s;
+}
+.delivery-link:hover {
+   font-size: 14px;
+}
+.popup__text {
+    display: flex;
+    align-items:center;
+}
+.menu__info {
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    max-width: 500px;
+}
+.form__title {
+    font-family: 'Yeseva One', serif;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+.form__input {
+    background-color: #FFF;
+    border: none;
+    border-bottom: 1px solid #FF7400 ;
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+    padding: 7px 10px;
+    color: black;
+}
+.form__input::placeholder {
+    color: #B3B3B3;
+    font-family: 'Comfortaa', sans-serif;; /* для Инпута надо указывать инче не тянет */
+    font-size: 14px; /* для Инпута надо указывать инче не тянет */
+    font-style: normal; /* для Инпута надо указывать инче не тянет */
+    font-weight: 400; /* для Инпута надо указывать инче не тянет */
+}
+
+
+.checkbox_text {
+    font-size: 13px;
+    padding-left: 20px;
+}
+.mailing-list__label {
+    margin-top: 16px;
+}
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0,0,0,0);
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+.checkbox-style {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #151618;
+    margin-top: 2px;
+}
+/* когда будет нажат будет закрашен */
+.checkbox:checked + .checkbox-style::before{
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color:#FF7400/*  #151618 */;
+    top: 1px;
+    left: 1px;
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 1099px) {
     .promo {
         background-position:inherit;
@@ -786,7 +970,6 @@ text-align: center;
     }
     .promo__subtitile-btn {
         text-align: center;
-        padding: 18px;
     }
     .meal__inner-menu {
             gap: 0 20px;
@@ -885,7 +1068,7 @@ text-align: center;
     .order-form__btn {
         width: 127px;
         font-size: 12px;
-        padding: 8px;
+        padding-top: 17px;
     }
     .story__inner-card-text {
         font-size: 18px;
@@ -908,7 +1091,6 @@ text-align: center;
     }
     .menu__inner-card-btn {
         width: 170px;
-        height: 40px;
     }
     .testimonial__inner  {
         padding: 105px 105px;
@@ -922,7 +1104,7 @@ text-align: center;
         display: none;
     }
     .mobile-menu-btn {
-        z-index: 20;
+        z-index: 5;
     display: block;
     background: none;
     border: none;
@@ -957,7 +1139,7 @@ text-align: center;
     }
     .mobile-menu.__active {
         right: 0;
-        z-index: 15;
+        z-index: 4;
     }
     .mune-item__mobile {
         margin-bottom: 10px;
@@ -988,11 +1170,11 @@ text-align: center;
         padding-top: 7px;
     }
     .order-form__btn__mobile {
+        text-align: center;
         width: 147px;
-        height: 37px;
+        padding: 15px 8px 13px 8px;
         background: #FF7400;
         font-size: 14px;
-        font-weight: 700;
         color: #FFF;
         border: none;
     }
@@ -1193,11 +1375,11 @@ text-align: center;
         display: none;
    }
    .poromo__inner-sidebar_mobile {
-       display: block;
+       display: flex;
        max-width: 290px;
    }
    .promo__subtitile-btn {
-    padding: 0;
+    padding: 17px 40px 15px 40px;
    }
    .promo__title-h1 {
     font-size: 26px;
@@ -1305,5 +1487,21 @@ text-align: center;
     .gallery_item2-img,
     .gallery_item3-img {
         display: none;
+    }
+    .popup__title {
+        font-size: 24px;
+    }
+    .form__title {
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+    .form__btn {
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 135px;
+        height: 40px;
+    }
+    .checkbox_text {
+        font-size: 11px;
     }
    }
