@@ -156,7 +156,7 @@ html._lock {
     text-align: center;
     padding-top: 17px;
     padding-bottom: 15px;
-    width: 157px;
+    width: 157px; 
     background: #FF7400;
     font-size: 14px;
     font-weight: 700;
@@ -715,8 +715,15 @@ text-align: center;
 .footer__inner {
     min-height: 100vh;
     display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
-
+.github__link {
+    color: wheat;
+}
+.github__link:hover {
+    color:#FF7400;
+}
 /* @media (max-width: 1389px) {
     .blog__button {
         top: 50%;
