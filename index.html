@@ -70,7 +70,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                                 </p>
                             </li>
                         </ul>
-                        <button class="order-form__btn__mobile" type="button">ЗАКАЗ СТОЛИКА</button>
+                        <a href="#popup" class="order-form__btn__mobile popup__link">ЗАКАЗ СТОЛИКА</a>
                     </div>
                 </div>
                 <div class="shopping-cart">
@@ -92,7 +92,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                             </p>
                         </li>
                     </ul>
-                    <button class="order-form__btn" type="button">ЗАКАЗ СТОЛИКА</button>
+                    <a href="#popup" class="order-form__btn popup__link" >ЗАКАЗ СТОЛИКА</a>
                 </div>
             </nav>
          </div>
@@ -113,7 +113,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                             ДОМ ЛУЧШЕЙ ЕДЫ
                             <span class="promo__subtitile-solid"></span>
                         </h3>
-                        <button type="button" class="promo__subtitile-btn">VIEW MENU</button>
+                        <a href="#popup_3" class="promo__subtitile-btn popup__link">VIEW MENU</a>
                         </div>
                         <div class="poromo__inner-sidebar_mobile">
                             <h1 class="promo__title-h1">Добро пожаловать</h1>
@@ -122,7 +122,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                                 ДОМ ЛУЧШЕЙ ЕДЫ
                             </h3>
                         </h2>
-                        <button type="button" class="promo__subtitile-btn">МЕНЮ</button>
+                        <a href="#popup_3" class="promo__subtitile-btn popup__link">МЕНЮ</a>
                         </div>
                     </div>
                 </div>
@@ -200,7 +200,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                     </h2>
                     <p class="delicious__text">Только в этом месяце бизнес-ланч от 250 ₽</p>
                     </div>
-                    <button class="delicious__btn" type="button">ЗАКАЗ СТОЛИКА</button>
+                    <a href="#popup" class="delicious__btn popup__link">ЗАКАЗ СТОЛИКА</a>
                 </div>
             </div>
         </section>
@@ -262,7 +262,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                                     Максимально толстый слой мяса
                                 </p>
                                 </div>
-                                <button type="button" class="menu__inner-card-btn">ЗАКАЗАТЬ</button>
+                                <a href="#popup_2" class="menu__inner-card-btn popup__link">ЗАКАЗАТЬ</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -276,7 +276,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                                     Максимально толстый слой мяса
                                 </p>
                                 </div>
-                                <button type="button" class="menu__inner-card-btn">ЗАКАЗАТЬ</button>
+                                <a href="#popup_2" class="menu__inner-card-btn popup__link">ЗАКАЗАТЬ</a>
                         </div>
                         </div>
                        <div class="swiper-slide">
@@ -290,7 +290,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                                     Максимально толстый слой мяса
                                 </p>
                                 </div>
-                                <button type="button" class="menu__inner-card-btn">ЗАКАЗАТЬ</button>
+                                <a href="#popup_2" class="menu__inner-card-btn popup__link">ЗАКАЗАТЬ</a>
                          </div>
                         </div> 
                         <div class="swiper-slide">
@@ -426,7 +426,115 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         </section>
     </main>
   
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <div id="popup" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#header" class="popup__close close-popup">X</a>
+                <h3 class="popup__title">Форма заказа столика</h3>
+                <a href="#popup_2" class="delivery-link popup__link">Заказать достаку ?</a>
+                <div class="popup__text">
+                    <form action="" class="form">
+                        <p class="form__title">Оставьте ваши контакты и мы вам перезвоним</p>
+                        <input class="form__input" type="text" placeholder="Имя">
+                        <input class="form__input" type="tel" placeholder="+00 (000)-000-00">
+                        <button class="form__btn" type="submit">ЗАКАЗАТЬ</button>
+                        <label class="mailing-list__label">
+                            <input class="checkbox" type="checkbox" name="" id="">
+                            <span class="checkbox-style"></span>
+                            <p class="checkbox_text">
+                                Даю согласие на обработку персональных данных
+                            </p>
+                        </label>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup_2" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#header" class="popup__close close-popup">X</a>
+                <h3 class="popup__title">Форма заказа доставки</h3>
+                <a href="#popup" class="delivery-link popup__link">Заказать столик ?</a>
+                <div class="popup__text">
+                    <form action="" class="form">
+                        <p class="form__title">Оставьте ваши контакты и мы вам перезвоним</p>
+                        <input class="form__input" type="text" placeholder="Имя">
+                        <input class="form__input" type="tel" placeholder="+00 (000)-000-00">
+                        <button class="form__btn" type="submit">ЗАКАЗАТЬ</button>
+                        <label class="mailing-list__label">
+                            <input class="checkbox" type="checkbox" name="" id="">
+                            <span class="checkbox-style"></span>
+                            <p class="checkbox_text">
+                                Даю согласие на обработку персональных данных
+                            </p>
+                        </label>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup_3" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#header" class="popup__close close-popup">X</a>
+                <h3 class="popup__title">НАШЕ МЕНЮ</h3>
+                <div class="popup__menu-link">
+                <a href="#popup" class="delivery-link popup__link">Заказать столик ?</a>
+                <a href="#popup_2" class="delivery-link popup__link">Заказать доставку ?</a>
+                </div>
+
+                <div class="popup-menu__text">
+                    <table class="menu__info">
+                        <tbody>
+                            <tr>
+                                <td>Espresso</td>
+                                <td>2.29</td>
+                            </tr>
+                            <tr>
+                                <td>Americano</td>
+                                <td>2.79</td>
+                            </tr>
+                            <tr>
+                                <td>Latte</td>
+                                <td>3.49</td>
+                            </tr>
+                            <tr>
+                                <td>Cappuccino</td> 
+                                <td>3.79</td>
+                            </tr>
+                            <tr>
+                                <td>Pepsi</td> 
+                                <td>1.10</td>
+                            </tr>
+                            <tr>
+                                <td>Fanta</td> 
+                                <td>1.10</td>
+                            </tr>
+                            <tr>
+                                <td>Sprite</td> 
+                                <td>1.10</td>
+                            </tr>
+                            <tr>
+                                <td>Hamburger</td> 
+                                <td>5.10</td>
+                            </tr>
+                            <tr>
+                                <td>Dobble Hamburger</td> 
+                                <td>7.10</td>
+                            </tr>
+                            <tr>
+                                <td>BigMac</td> 
+                                <td>10.10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/popup.js"></script>
 </body>
 </html>
